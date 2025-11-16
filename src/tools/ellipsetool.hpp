@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ELLIPSETOOL_H
-#define ELLIPSETOOL_H
+#pragma once
 
 #include "polygondrawingtool.hpp"
 class PropertyManager;
@@ -32,4 +31,3 @@ public:
     IconManager::Icon icon() const override;
 };
 
-#endif  // ELLIPSETOOL_H

@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CANVAS_H
-#define CANVAS_H
+#pragma once
 
 #include <QPainter>
 #include <QWidget>
@@ -89,4 +88,3 @@ private:
     void resize();
 };
 
-#endif  // CANVAS_H

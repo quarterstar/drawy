@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef TOOL_H
-#define TOOL_H
+#pragma once
 
 #include "../iconmanager/iconmanager.hpp"
 #include "../properties/property.hpp"
@@ -67,4 +66,3 @@ protected:
     QVector<Property::Type> m_properties;
 };
 
-#endif  // TOOL_H

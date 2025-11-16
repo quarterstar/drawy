@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CONTROLLER_H
-#define CONTROLLER_H
+#pragma once
 
 #include "../tools/tool.hpp"
 #include <QDateTime>
@@ -55,4 +54,3 @@ private:
     bool m_movingWithMiddleClick{false};
 };
 
-#endif  // CONTROLLER_H

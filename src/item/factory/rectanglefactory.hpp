@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef RECTANGLEFACTORY_H
-#define RECTANGLEFACTORY_H
+#pragma once
 
 #include "itemfactory.hpp"
 
@@ -29,4 +28,3 @@ public:
     std::shared_ptr<Item> create() const override;
 };
 
-#endif  // RECTANGLEFACTORY_H

@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef PROPERTYWIDGET_H
-#define PROPERTYWIDGET_H
+#pragma once
 
 #include <QWidget>
 class Property;
@@ -39,4 +38,3 @@ protected:
     QWidget *m_widget{};
 };
 
-#endif  // PROPERTYWIDGET_H

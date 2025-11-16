@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef KEYBINDMANAGER_H
-#define KEYBINDMANAGER_H
+#pragma once
 
 #include "action.hpp"
 #include <QKeySequence>
@@ -38,4 +37,3 @@ private:
     std::unordered_map<QString, Action *> m_keyToAction;
 };
 
-#endif  // KEYBINDMANAGER_H

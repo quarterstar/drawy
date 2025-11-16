@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef UNDOREDOMANAGER_H
-#define UNDOREDOMANAGER_H
+#pragma once
 
 #include "command.hpp"
 #include <deque>
@@ -44,4 +43,3 @@ private:
     ApplicationContext *m_context;
 };
 
-#endif  // UNDOREDOMANAGER_H

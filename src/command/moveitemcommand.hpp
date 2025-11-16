@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef MOVEITEMCOMMAND_H
-#define MOVEITEMCOMMAND_H
+#pragma once
 
 #include "itemcommand.hpp"
 #include <QPointF>
@@ -34,4 +33,3 @@ private:
     QPointF m_delta;
 };
 
-#endif  // MOVEITEMCOMMAND_H

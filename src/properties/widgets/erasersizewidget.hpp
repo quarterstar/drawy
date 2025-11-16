@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ERASERSIZEWIDGET_H
-#define ERASERSIZEWIDGET_H
+#pragma once
 
 #include "propertywidget.hpp"
 
@@ -29,4 +28,3 @@ public:
     const Property value() const override;
 };
 
-#endif  // TOOLERASERSIZE_H

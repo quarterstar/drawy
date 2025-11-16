@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef POLYGON_H
-#define POLYGON_H
+#pragma once
 
 #include "item.hpp"
 
@@ -45,4 +44,3 @@ private:
     void m_updateBoundingBox();
 };
 
-#endif  // POLYGON_H

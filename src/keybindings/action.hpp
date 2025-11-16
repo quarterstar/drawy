@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ACTION_H
-#define ACTION_H
+#pragma once
 
 #include <QDebug>
 #include <QObject>
@@ -44,4 +43,3 @@ struct hash<Action> {
 };
 };  // namespace std
 
-#endif

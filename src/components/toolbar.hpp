@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef TOOLBAR_H
-#define TOOLBAR_H
+#pragma once
 
 #include "../tools/tool.hpp"
 #include <QButtonGroup>
@@ -51,4 +50,3 @@ private slots:
     void onToolChanged(int id);
 };
 
-#endif  // TOOLBAR_H

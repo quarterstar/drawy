@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef TEXT_H
-#define TEXT_H
+#pragma once
 
 #include "item.hpp"
 #include <QPainter>
@@ -100,4 +99,3 @@ private:
     Mode m_mode;
 };
 
-#endif  // TEXT_H

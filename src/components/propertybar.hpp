@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef PROPERTYBAR_H
-#define PROPERTYBAR_H
+#pragma once
 
 #include <QFrame>
 #include <QStackedWidget>
@@ -41,4 +40,3 @@ private:
     PropertyManager *m_propertyManager{};
 };
 
-#endif  // PROPERTYBAR_H

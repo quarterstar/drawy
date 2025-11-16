@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ITEMFACTORY_H
-#define ITEMFACTORY_H
+#pragma once
 #include <memory>
 
 class Item;
@@ -28,4 +27,3 @@ public:
     virtual std::shared_ptr<Item> create() const = 0;
 };
 
-#endif  // ITEMFACTORY_H

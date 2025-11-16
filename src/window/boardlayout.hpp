@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef BOARDLAYOUT_H
-#define BOARDLAYOUT_H
+#pragma once
 
 #include <QLayout>
 
@@ -59,4 +58,3 @@ private:
     int m_margins{0};
 };
 
-#endif  // BOARDLAYOUT_H

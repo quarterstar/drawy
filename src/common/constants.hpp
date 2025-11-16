@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CONSTANTS_H
-#define CONSTANTS_H
+#pragma once
 
 #include <QColor>
 #include <QMargins>
@@ -61,4 +60,3 @@ constexpr qreal tabStopDistance{4};
 
 };  // namespace Common
 
-#endif  // CONSTANTS_H

@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef RECTANGLE_H
-#define RECTANGLE_H
+#pragma once
 
 #include "polygon.hpp"
 
@@ -35,4 +34,3 @@ protected:
     void m_draw(QPainter &painter, const QPointF &offset) const override;
 };
 
-#endif  // RECTANGLE_H

@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ARROW_H
-#define ARROW_H
+#pragma once
 
 #include "polygon.hpp"
 
@@ -48,4 +47,3 @@ private:
     void calcArrowPoints();
 };
 
-#endif  // ARROW_H

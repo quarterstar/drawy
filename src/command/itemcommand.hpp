@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ITEMCOMMAND_H
-#define ITEMCOMMAND_H
+#pragma once
 
 #include "command.hpp"
 #include <QVector>
@@ -34,4 +33,3 @@ protected:
     QVector<std::shared_ptr<Item>> m_items;
 };
 
-#endif  // ITEMCOMMAND_H

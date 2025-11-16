@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef APPLICATIONCONTEXT_H
-#define APPLICATIONCONTEXT_H
+#pragma once
 
 #include <QWidget>
 class RenderingContext;
@@ -68,4 +67,3 @@ private:
     static ApplicationContext *m_instance;
 };
 
-#endif  // APPLICATIONCONTEXT_H

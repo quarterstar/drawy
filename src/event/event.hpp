@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef EVENT_H
-#define EVENT_H
+#pragma once
 #include <qglobal.h>
 
 #include <QPoint>
@@ -49,4 +48,3 @@ private:
     Qt::KeyboardModifiers m_modifiers;
 };
 
-#endif  // EVENT_H

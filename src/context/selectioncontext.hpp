@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SELECTIONCONTEXT_H
-#define SELECTIONCONTEXT_H
+#pragma once
 
 #include <QWidget>
 #include <unordered_set>
@@ -45,4 +44,3 @@ private:
     ApplicationContext *m_applicationContext;
 };
 
-#endif  // SELECTIONCONTEXT_H

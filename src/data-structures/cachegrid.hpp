@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CACHEGRID_H
-#define CACHEGRID_H
+#pragma once
 #include <QHash>
 #include <QPixmap>
 #include <QPoint>
@@ -74,4 +73,3 @@ private:
     int m_maxSize{0};
 };
 
-#endif  // CACHEGRID_H

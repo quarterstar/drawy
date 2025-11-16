@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SELECTIONTOOLSELECTSTATE_H
-#define SELECTIONTOOLSELECTSTATE_H
+#pragma once
 
 #include "selectiontoolstate.hpp"
 #include <QPointF>
@@ -32,4 +31,3 @@ private:
     QPointF m_lastPos;
 };
 
-#endif  // SELECTIONTOOLSELECTSTATE_H

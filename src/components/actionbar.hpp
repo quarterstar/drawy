@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ACTIONBAR_H
-#define ACTIONBAR_H
+#pragma once
 
 #include "../iconmanager/iconmanager.hpp"
 #include <QFrame>
@@ -38,4 +37,3 @@ private:
     QHBoxLayout *m_layout{};
 };
 
-#endif  // ACTIONBAR_H

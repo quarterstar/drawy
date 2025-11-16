@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef STROKECOLORWIDGET_H
-#define STROKECOLORWIDGET_H
+#pragma once
 
 #include "propertywidget.hpp"
 class QButtonGroup;
@@ -33,4 +32,3 @@ private:
     QButtonGroup *m_group{};
 };
 
-#endif  // STROKECOLORWIDGET_H

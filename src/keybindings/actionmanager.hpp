@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ACTIONMANAGER_H
-#define ACTIONMANAGER_H
+#pragma once
 
 #include <QObject>
 class ApplicationContext;
@@ -47,4 +46,3 @@ private:
     ApplicationContext *m_context;
 };
 
-#endif  // ACTIONMANAGER_H

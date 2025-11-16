@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef LINEFACTORY_H
-#define LINEFACTORY_H
+#pragma once
 
 #include "itemfactory.hpp"
 
@@ -27,4 +26,3 @@ public:
     std::shared_ptr<Item> create() const override;
 };
 
-#endif  // LINEFACTORY_H

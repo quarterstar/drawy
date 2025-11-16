@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef LOADER_H
-#define LOADER_H
+#pragma once
 
 #include <QJsonObject>
 #include <memory>
@@ -40,4 +39,3 @@ private:
     static QPointF toPointF(const QJsonValue &val);
 };
 
-#endif

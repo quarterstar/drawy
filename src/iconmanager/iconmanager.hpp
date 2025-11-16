@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ICONMANAGER_H
-#define ICONMANAGER_H
+#pragma once
 
 #include <QObject>
 #include <unordered_map>
@@ -56,4 +55,3 @@ private:
     QString m_curTheme{"fa-dark"};  // default
 };
 
-#endif  // ICONMANAGER_H

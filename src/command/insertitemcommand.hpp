@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef INSERTITEMCOMMAND_H
-#define INSERTITEMCOMMAND_H
+#pragma once
 
 #include "itemcommand.hpp"
 class ApplicationContext;
@@ -31,4 +30,3 @@ public:
     void undo(ApplicationContext *context) override;
 };
 
-#endif  // INSERTITEMCOMMAND_H

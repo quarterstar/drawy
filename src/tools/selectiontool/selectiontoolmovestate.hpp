@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SELECTIONTOOLMOVESTATE_H
-#define SELECTIONTOOLMOVESTATE_H
+#pragma once
 
 #include "selectiontoolstate.hpp"
 #include <QPointF>
@@ -33,4 +32,3 @@ private:
     QPointF m_initialPos{};
 };
 
-#endif  // SELECTIONTOOLMOVESTATE_H

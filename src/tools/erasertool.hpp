@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ERASERTOOL_H
-#define ERASERTOOL_H
+#pragma once
 
 #include "../common/constants.hpp"
 #include "tool.hpp"
@@ -49,4 +48,3 @@ private:
     std::unordered_set<std::shared_ptr<Item>> m_toBeErased;
 };
 
-#endif  // ERASERTOOL_H

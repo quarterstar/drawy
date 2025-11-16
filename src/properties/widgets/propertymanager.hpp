@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef PROPERTYMANAGER_H
-#define PROPERTYMANAGER_H
+#pragma once
 #include "../property.hpp"
 #include "propertywidget.hpp"
 #include <QObject>
@@ -37,4 +36,3 @@ private:
     std::unordered_map<Property::Type, PropertyWidget *> m_widgets{};
 };
 
-#endif  // PROPERTYMANAGER_H

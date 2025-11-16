@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ARROWTOOL_H
-#define ARROWTOOL_H
+#pragma once
 
 #include "polygondrawingtool.hpp"
 class PropertyManager;
@@ -31,4 +30,3 @@ public:
     IconManager::Icon icon() const override;
 };
 
-#endif  // ARROWTOOL_H

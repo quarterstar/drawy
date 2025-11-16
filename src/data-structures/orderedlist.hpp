@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ORDEREDLIST_H
-#define ORDEREDLIST_H
+#pragma once
 
 #include <list>
 #include <memory>
@@ -49,4 +48,3 @@ public:
     int zIndex(ItemPtr item) const;
 };
 
-#endif  // ORDEREDLIST_H

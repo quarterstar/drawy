@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef UPDATEPROPERTYCOMMAND_H
-#define UPDATEPROPERTYCOMMAND_H
+#pragma once
 
 #include "../properties/property.hpp"
 #include "itemcommand.hpp"
@@ -35,4 +34,3 @@ private:
     std::unordered_map<std::shared_ptr<Item>, Property> m_properties{};
 };
 
-#endif  // REMOVEITEMCOMMAND_H

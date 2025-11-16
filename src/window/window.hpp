@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QWidget>
 
@@ -32,4 +31,3 @@ private:
     bool m_config_useSystemStyles{true};
     void m_applyCustomStyles();
 };
-#endif  // MAINWINDOW_H

@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef UICONTEXT_H
-#define UICONTEXT_H
+#pragma once
 
 #include <QWidget>
 class ToolBar;
@@ -67,4 +66,3 @@ private:
     ApplicationContext *m_applicationContext;
 };
 
-#endif  // UICONTEXT_H

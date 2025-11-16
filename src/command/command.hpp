@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef COMMAND_H
-#define COMMAND_H
+#pragma once
 
 class ApplicationContext;
 
@@ -27,4 +26,3 @@ public:
     virtual void undo(ApplicationContext *context) = 0;
 };
 
-#endif  // COMMAND_H

@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef DRAWINGTOOL_H
-#define DRAWINGTOOL_H
+#pragma once
 
 #include "../item/factory/itemfactory.hpp"
 #include "tool.hpp"
@@ -34,4 +33,3 @@ protected:
     bool m_isDrawing{false};
 };
 
-#endif  // DRAWINGTOOL_H

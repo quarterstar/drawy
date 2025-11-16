@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef REMOVEITEMCOMMAND_H
-#define REMOVEITEMCOMMAND_H
+#pragma once
 
 #include "itemcommand.hpp"
 class ApplicationContext;
@@ -30,4 +29,3 @@ public:
     void undo(ApplicationContext *context) override;
 };
 
-#endif  // REMOVEITEMCOMMAND_H

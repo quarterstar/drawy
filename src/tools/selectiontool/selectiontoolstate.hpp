@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SELECTIONTOOLSTATE_H
-#define SELECTIONTOOLSTATE_H
+#pragma once
 
 class ApplicationContext;
 
@@ -32,4 +31,3 @@ protected:
     bool m_isActive{false};
 };
 
-#endif  // SELECTIONTOOLSTATE_H

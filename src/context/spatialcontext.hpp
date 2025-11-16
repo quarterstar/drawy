@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SPATIALCONTEXT_H
-#define SPATIALCONTEXT_H
+#pragma once
 
 #include <QWidget>
 class QuadTree;
@@ -58,4 +57,3 @@ private:
     ApplicationContext *m_applicationContext;
 };
 
-#endif  // SPATIALCONTEXT_H

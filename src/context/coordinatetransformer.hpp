@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef COORDINATETRANSFORMER_H
-#define COORDINATETRANSFORMER_H
+#pragma once
 
 #include <QRect>
 class ApplicationContext;
@@ -88,4 +87,3 @@ public:
     QSize round(QSizeF size);
 };
 
-#endif  // COORDINATETRANSFORMER_H

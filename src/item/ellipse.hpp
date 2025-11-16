@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ELLIPSE_H
-#define ELLIPSE_H
+#pragma once
 
 #include "polygon.hpp"
 
@@ -38,4 +37,3 @@ private:
     bool onEllipse(QLineF line) const;
 };
 
-#endif  // ELLIPSE_H

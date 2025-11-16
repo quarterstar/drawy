@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef FREEFORM_H
-#define FREEFORM_H
+#pragma once
 
 #include "item.hpp"
 #include <deque>
@@ -65,4 +64,3 @@ private:
     int m_bufferSize{7};
 };
 
-#endif  // FREEFORM_H

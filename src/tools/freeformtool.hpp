@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef FREEFORMTOOL_H
-#define FREEFORMTOOL_H
+#pragma once
 
 #include "drawingtool.hpp"
 #include <QElapsedTimer>
@@ -44,4 +43,3 @@ private:
     QPointF m_lastPoint{};
 };
 
-#endif  // FREEFORMTOOL_H

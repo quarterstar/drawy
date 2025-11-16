@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef RENDERINGCONTEXT_H
-#define RENDERINGCONTEXT_H
+#pragma once
 
 #include <QTimer>
 #include <QWidget>
@@ -71,4 +70,3 @@ private:
     ApplicationContext *m_applicationContext;
 };
 
-#endif  // RENDERINGCONTEXT_H

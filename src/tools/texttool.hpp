@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef TEXTTOOL_H
-#define TEXTTOOL_H
+#pragma once
 
 #include "../item/text.hpp"
 #include "drawingtool.hpp"
@@ -51,4 +50,3 @@ private:
     bool m_tripleClicked{false};
 };
 
-#endif  // TEXTTOOL_H

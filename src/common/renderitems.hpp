@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef RENDERITEMS_H
-#define RENDERITEMS_H
+#pragma once
 
 class ApplicationContext;
 
@@ -25,4 +24,3 @@ namespace Common {
 void renderCanvas(ApplicationContext *context);
 };
 
-#endif

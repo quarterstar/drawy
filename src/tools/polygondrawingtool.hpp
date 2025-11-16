@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef POLYGONDRAWINGTOOL_H
-#define POLYGONDRAWINGTOOL_H
+#pragma once
 
 #include "drawingtool.hpp"
 class PolygonItem;
@@ -39,4 +38,3 @@ public:
     Tool::Type type() const override;
 };
 
-#endif  // POLYGONDRAWINGTOOL_H

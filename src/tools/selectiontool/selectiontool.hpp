@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SELECTIONTOOL_H
-#define SELECTIONTOOL_H
+#pragma once
 
 #include "../tool.hpp"
 class SelectionToolState;
@@ -49,4 +48,3 @@ private:
     bool m_stateLocked{false};
 };
 
-#endif  // SELECTIONTOOL_H

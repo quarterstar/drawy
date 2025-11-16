@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ITEM_H
-#define ITEM_H
+#pragma once
 
 #include "../properties/property.hpp"
 #include <QPainter>
@@ -63,4 +62,3 @@ protected:
     virtual void m_draw(QPainter &painter, const QPointF &offset) const = 0;
 };
 
-#endif  // ITEM_H

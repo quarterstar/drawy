@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef PROPERTY_H
-#define PROPERTY_H
+#pragma once
 
 #include <QVariant>
 
@@ -51,4 +50,3 @@ private:
     Type m_type{};
 };
 
-#endif  // PROPERTY_H

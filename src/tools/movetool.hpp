@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef MOVETOOL_H
-#define MOVETOOL_H
+#pragma once
 
 #include "tool.hpp"
 #include <QElapsedTimer>
@@ -43,4 +42,3 @@ private:
     QPointF m_initialPos{};
 };
 
-#endif  // MOVETOOL_H

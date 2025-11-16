@@ -16,8 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QUADTREE_H
-#define QUADTREE_H
+#pragma once
 
 #include "../item/item.hpp"
 #include <QPainter>
@@ -92,4 +91,3 @@ private:
 
 #include "quadtree.ipp"
 
-#endif  // QUADTREE_H
