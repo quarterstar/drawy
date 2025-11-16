@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "arrow.h"
+#include "arrow.hpp"
 
-#include "../common/utils.h"
+#include "../common/utils.hpp"
 
 ArrowItem::ArrowItem() {
 }

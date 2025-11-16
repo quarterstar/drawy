@@ -16,13 +16,13 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "applicationcontext.h"
+#include "applicationcontext.hpp"
 
-#include "coordinatetransformer.h"
-#include "renderingcontext.h"
-#include "selectioncontext.h"
-#include "spatialcontext.h"
-#include "uicontext.h"
+#include "coordinatetransformer.hpp"
+#include "renderingcontext.hpp"
+#include "selectioncontext.hpp"
+#include "spatialcontext.hpp"
+#include "uicontext.hpp"
 
 ApplicationContext *ApplicationContext::m_instance = nullptr;
 

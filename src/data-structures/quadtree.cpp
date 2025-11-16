@@ -16,10 +16,10 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "quadtree.h"
+#include "quadtree.hpp"
 
-#include "../item/item.h"
-#include "orderedlist.h"
+#include "../item/item.hpp"
+#include "orderedlist.hpp"
 #include <QDebug>
 #include <cstdlib>
 #include <memory>

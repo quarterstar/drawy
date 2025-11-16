@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "erasersizewidget.h"
+#include "erasersizewidget.hpp"
 
-#include "../property.h"
+#include "../property.hpp"
 #include <QSpinBox>
 
 EraserSizeWidget::EraserSizeWidget(QWidget *parent) : PropertyWidget{parent} {

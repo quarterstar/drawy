@@ -16,10 +16,10 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "actionbar.h"
+#include "actionbar.hpp"
 
-#include "../context/applicationcontext.h"
-#include "../context/uicontext.h"
+#include "../context/applicationcontext.hpp"
+#include "../context/uicontext.hpp"
 #include <stdexcept>
 
 ActionBar::ActionBar(QWidget *parent) : QFrame{parent} {

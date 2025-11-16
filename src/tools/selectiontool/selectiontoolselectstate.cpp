@@ -16,20 +16,20 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "selectiontoolselectstate.h"
+#include "selectiontoolselectstate.hpp"
 
-#include "../../canvas/canvas.h"
-#include "../../components/propertybar.h"
-#include "../../context/applicationcontext.h"
-#include "../../context/coordinatetransformer.h"
-#include "../../context/renderingcontext.h"
-#include "../../context/selectioncontext.h"
-#include "../../context/spatialcontext.h"
-#include "../../context/uicontext.h"
-#include "../../data-structures/cachegrid.h"
-#include "../../data-structures/quadtree.h"
-#include "../../event/event.h"
-#include "../../item/item.h"
+#include "../../canvas/canvas.hpp"
+#include "../../components/propertybar.hpp"
+#include "../../context/applicationcontext.hpp"
+#include "../../context/coordinatetransformer.hpp"
+#include "../../context/renderingcontext.hpp"
+#include "../../context/selectioncontext.hpp"
+#include "../../context/spatialcontext.hpp"
+#include "../../context/uicontext.hpp"
+#include "../../data-structures/cachegrid.hpp"
+#include "../../data-structures/quadtree.hpp"
+#include "../../event/event.hpp"
+#include "../../item/item.hpp"
 
 bool SelectionToolSelectState::mousePressed(ApplicationContext *context) {
     auto &uiContext{context->uiContext()};

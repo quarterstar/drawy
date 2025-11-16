@@ -16,21 +16,21 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "polygondrawingtool.h"
+#include "polygondrawingtool.hpp"
 
-#include "../canvas/canvas.h"
-#include "../command/commandhistory.h"
-#include "../command/insertitemcommand.h"
-#include "../common/renderitems.h"
-#include "../context/applicationcontext.h"
-#include "../context/coordinatetransformer.h"
-#include "../context/renderingcontext.h"
-#include "../context/spatialcontext.h"
-#include "../context/uicontext.h"
-#include "../event/event.h"
-#include "../item/factory/itemfactory.h"
-#include "../item/polygon.h"
-#include "../properties/widgets/propertymanager.h"
+#include "../canvas/canvas.hpp"
+#include "../command/commandhistory.hpp"
+#include "../command/insertitemcommand.hpp"
+#include "../common/renderitems.hpp"
+#include "../context/applicationcontext.hpp"
+#include "../context/coordinatetransformer.hpp"
+#include "../context/renderingcontext.hpp"
+#include "../context/spatialcontext.hpp"
+#include "../context/uicontext.hpp"
+#include "../event/event.hpp"
+#include "../item/factory/itemfactory.hpp"
+#include "../item/polygon.hpp"
+#include "../properties/widgets/propertymanager.hpp"
 
 PolygonDrawingTool::PolygonDrawingTool() {
     m_cursor = QCursor(Qt::CrossCursor);

@@ -16,7 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "keybindmanager.h"
+#include "keybindmanager.hpp"
 
 KeybindManager::KeybindManager(QObject *parent) : QObject{parent} {
 }

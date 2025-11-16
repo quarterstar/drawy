@@ -16,13 +16,13 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "renderingcontext.h"
+#include "renderingcontext.hpp"
 
-#include "../canvas/canvas.h"
-#include "../common/renderitems.h"
-#include "../data-structures/cachegrid.h"
-#include "applicationcontext.h"
-#include "spatialcontext.h"
+#include "../canvas/canvas.hpp"
+#include "../common/renderitems.hpp"
+#include "../data-structures/cachegrid.hpp"
+#include "applicationcontext.hpp"
+#include "spatialcontext.hpp"
 #include <QScreen>
 
 RenderingContext::RenderingContext(ApplicationContext *context)

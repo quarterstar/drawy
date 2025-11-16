@@ -25,7 +25,7 @@ set(SRC_DIR ${CMAKE_SOURCE_DIR}/src)
 # Use globbing to recursively collect all source, header, and resource files from src/.
 file(GLOB_RECURSE SRC_FILES
     "${SRC_DIR}/*.cpp"
-    "${SRC_DIR}/*.h"
+    "${SRC_DIR}/*.hpp"
     "${SRC_DIR}/*.qrc"
     "${SRC_DIR}/*.qss"
 )

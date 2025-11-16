@@ -16,11 +16,11 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "coordinatetransformer.h"
+#include "coordinatetransformer.hpp"
 
-#include "applicationcontext.h"
-#include "renderingcontext.h"
-#include "spatialcontext.h"
+#include "applicationcontext.hpp"
+#include "renderingcontext.hpp"
+#include "spatialcontext.hpp"
 #include <cmath>
 
 CoordinateTransformer::CoordinateTransformer(ApplicationContext *context)

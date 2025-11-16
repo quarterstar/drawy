@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "linetool.h"
+#include "linetool.hpp"
 
-#include "../item/factory/linefactory.h"
+#include "../item/factory/linefactory.hpp"
 
 LineTool::LineTool() {
     m_itemFactory = std::make_unique<LineFactory>();

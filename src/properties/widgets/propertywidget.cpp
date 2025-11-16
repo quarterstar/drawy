@@ -16,7 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "propertywidget.h"
+#include "propertywidget.hpp"
 
 PropertyWidget::PropertyWidget(QWidget *parent) : QObject{parent} {
 }

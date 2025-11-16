@@ -16,17 +16,17 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "selectioncontext.h"
+#include "selectioncontext.hpp"
 
-#include "../command/commandhistory.h"
-#include "../command/updatepropertycommand.h"
-#include "../data-structures/cachegrid.h"
-#include "../item/item.h"
-#include "../properties/property.h"
-#include "applicationcontext.h"
-#include "coordinatetransformer.h"
-#include "renderingcontext.h"
-#include "spatialcontext.h"
+#include "../command/commandhistory.hpp"
+#include "../command/updatepropertycommand.hpp"
+#include "../data-structures/cachegrid.hpp"
+#include "../item/item.hpp"
+#include "../properties/property.hpp"
+#include "applicationcontext.hpp"
+#include "coordinatetransformer.hpp"
+#include "renderingcontext.hpp"
+#include "spatialcontext.hpp"
 
 SelectionContext::SelectionContext(ApplicationContext *context)
     : QObject{context},

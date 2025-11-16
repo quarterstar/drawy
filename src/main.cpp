@@ -16,7 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "window/window.h"
+#include "window/window.hpp"
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>

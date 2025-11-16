@@ -16,23 +16,23 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "texttool.h"
+#include "texttool.hpp"
 
-#include "../canvas/canvas.h"
-#include "../command/commandhistory.h"
-#include "../command/insertitemcommand.h"
-#include "../context/applicationcontext.h"
-#include "../context/coordinatetransformer.h"
-#include "../context/renderingcontext.h"
-#include "../context/selectioncontext.h"
-#include "../context/spatialcontext.h"
-#include "../context/uicontext.h"
-#include "../data-structures/cachegrid.h"
-#include "../data-structures/quadtree.h"
-#include "../event/event.h"
-#include "../item/factory/textfactory.h"
-#include "../keybindings/keybindmanager.h"
-#include "../properties/widgets/propertymanager.h"
+#include "../canvas/canvas.hpp"
+#include "../command/commandhistory.hpp"
+#include "../command/insertitemcommand.hpp"
+#include "../context/applicationcontext.hpp"
+#include "../context/coordinatetransformer.hpp"
+#include "../context/renderingcontext.hpp"
+#include "../context/selectioncontext.hpp"
+#include "../context/spatialcontext.hpp"
+#include "../context/uicontext.hpp"
+#include "../data-structures/cachegrid.hpp"
+#include "../data-structures/quadtree.hpp"
+#include "../event/event.hpp"
+#include "../item/factory/textfactory.hpp"
+#include "../keybindings/keybindmanager.hpp"
+#include "../properties/widgets/propertymanager.hpp"
 #include <QClipboard>
 #include <QGuiApplication>
 #include <memory>

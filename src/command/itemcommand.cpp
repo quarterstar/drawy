@@ -16,7 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "itemcommand.h"
+#include "itemcommand.hpp"
 
 #include <QDebug>
 

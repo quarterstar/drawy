@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "strokewidthwidget.h"
+#include "strokewidthwidget.hpp"
 
-#include "../property.h"
+#include "../property.hpp"
 #include <QSpinBox>
 
 StrokeWidthWidget::StrokeWidthWidget(QWidget *parent) : PropertyWidget{parent} {

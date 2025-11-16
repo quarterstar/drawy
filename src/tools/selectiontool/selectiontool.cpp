@@ -16,22 +16,22 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "selectiontool.h"
+#include "selectiontool.hpp"
 
-#include "../../command/commandhistory.h"
-#include "../../command/moveitemcommand.h"
-#include "../../common/constants.h"
-#include "../../context/applicationcontext.h"
-#include "../../context/coordinatetransformer.h"
-#include "../../context/renderingcontext.h"
-#include "../../context/selectioncontext.h"
-#include "../../context/spatialcontext.h"
-#include "../../context/uicontext.h"
-#include "../../event/event.h"
-#include "../../item/item.h"
-#include "selectiontoolmovestate.h"
-#include "selectiontoolselectstate.h"
-#include "selectiontoolstate.h"
+#include "../../command/commandhistory.hpp"
+#include "../../command/moveitemcommand.hpp"
+#include "../../common/constants.hpp"
+#include "../../context/applicationcontext.hpp"
+#include "../../context/coordinatetransformer.hpp"
+#include "../../context/renderingcontext.hpp"
+#include "../../context/selectioncontext.hpp"
+#include "../../context/spatialcontext.hpp"
+#include "../../context/uicontext.hpp"
+#include "../../event/event.hpp"
+#include "../../item/item.hpp"
+#include "selectiontoolmovestate.hpp"
+#include "selectiontoolselectstate.hpp"
+#include "selectiontoolstate.hpp"
 #include <set>
 
 SelectionTool::SelectionTool() {

@@ -16,24 +16,24 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "actionmanager.h"
+#include "actionmanager.hpp"
 
-#include "../command/commandhistory.h"
-#include "../command/removeitemcommand.h"
-#include "../components/propertybar.h"
-#include "../components/toolbar.h"
-#include "../context/applicationcontext.h"
-#include "../context/coordinatetransformer.h"
-#include "../context/renderingcontext.h"
-#include "../context/selectioncontext.h"
-#include "../context/spatialcontext.h"
-#include "../context/uicontext.h"
-#include "../data-structures/cachegrid.h"
-#include "../data-structures/quadtree.h"
-#include "../serializer/loader.h"
-#include "../serializer/serializer.h"
-#include "action.h"
-#include "keybindmanager.h"
+#include "../command/commandhistory.hpp"
+#include "../command/removeitemcommand.hpp"
+#include "../components/propertybar.hpp"
+#include "../components/toolbar.hpp"
+#include "../context/applicationcontext.hpp"
+#include "../context/coordinatetransformer.hpp"
+#include "../context/renderingcontext.hpp"
+#include "../context/selectioncontext.hpp"
+#include "../context/spatialcontext.hpp"
+#include "../context/uicontext.hpp"
+#include "../data-structures/cachegrid.hpp"
+#include "../data-structures/quadtree.hpp"
+#include "../serializer/loader.hpp"
+#include "../serializer/serializer.hpp"
+#include "action.hpp"
+#include "keybindmanager.hpp"
 #include <memory>
 
 ActionManager::ActionManager(ApplicationContext *context) : m_context{context}, QObject(context) {

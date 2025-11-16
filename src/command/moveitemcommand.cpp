@@ -16,15 +16,15 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "moveitemcommand.h"
+#include "moveitemcommand.hpp"
 
-#include "../common/constants.h"
-#include "../context/applicationcontext.h"
-#include "../context/coordinatetransformer.h"
-#include "../context/spatialcontext.h"
-#include "../data-structures/cachegrid.h"
-#include "../data-structures/quadtree.h"
-#include "../item/item.h"
+#include "../common/constants.hpp"
+#include "../context/applicationcontext.hpp"
+#include "../context/coordinatetransformer.hpp"
+#include "../context/spatialcontext.hpp"
+#include "../data-structures/cachegrid.hpp"
+#include "../data-structures/quadtree.hpp"
+#include "../item/item.hpp"
 
 MoveItemCommand::MoveItemCommand(QVector<std::shared_ptr<Item>> items, QPointF delta)
     : ItemCommand{items},

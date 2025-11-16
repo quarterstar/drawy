@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "arrowtool.h"
+#include "arrowtool.hpp"
 
-#include "../item/factory/arrowfactory.h"
+#include "../item/factory/arrowfactory.hpp"
 
 ArrowTool::ArrowTool() {
     m_itemFactory = std::make_unique<ArrowFactory>();

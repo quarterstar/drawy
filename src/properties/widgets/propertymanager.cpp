@@ -16,12 +16,12 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "propertymanager.h"
+#include "propertymanager.hpp"
 
-#include "erasersizewidget.h"
-#include "fontsizewidget.h"
-#include "strokecolorwidget.h"
-#include "strokewidthwidget.h"
+#include "erasersizewidget.hpp"
+#include "fontsizewidget.hpp"
+#include "strokecolorwidget.hpp"
+#include "strokewidthwidget.hpp"
 
 PropertyManager::PropertyManager(QWidget *parent) : QObject{parent} {
     m_widgets[Property::StrokeWidth] = new StrokeWidthWidget(parent);

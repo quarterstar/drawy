@@ -16,11 +16,11 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "toolbar.h"
+#include "toolbar.hpp"
 
-#include "../context/applicationcontext.h"
-#include "../context/uicontext.h"
-#include "../iconmanager/iconmanager.h"
+#include "../context/applicationcontext.hpp"
+#include "../context/uicontext.hpp"
+#include "../iconmanager/iconmanager.hpp"
 
 ToolBar::ToolBar(QWidget *parent) : QFrame{parent} {
     m_group = new QButtonGroup(this);

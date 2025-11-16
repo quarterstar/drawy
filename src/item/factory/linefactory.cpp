@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "linefactory.h"
+#include "linefactory.hpp"
 
-#include "../line.h"
+#include "../line.hpp"
 
 LineFactory::LineFactory() {
 }

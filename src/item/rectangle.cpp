@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "rectangle.h"
+#include "rectangle.hpp"
 
-#include "../common/utils.h"
+#include "../common/utils.hpp"
 #include <QDebug>
 
 RectangleItem::RectangleItem() {

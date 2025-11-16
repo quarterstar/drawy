@@ -16,7 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "action.h"
+#include "action.hpp"
 
 Action::Action(QString name, QString description, std::function<void()> callable, QObject *parent)
     : m_name{name},

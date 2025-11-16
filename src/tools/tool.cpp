@@ -16,7 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "tool.h"
+#include "tool.hpp"
 
 #include <QDebug>
 

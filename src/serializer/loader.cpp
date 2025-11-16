@@ -16,20 +16,20 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "loader.h"
+#include "loader.hpp"
 
-#include "../context/applicationcontext.h"
-#include "../context/renderingcontext.h"
-#include "../context/spatialcontext.h"
-#include "../data-structures/cachegrid.h"
-#include "../data-structures/quadtree.h"
-#include "../item/arrow.h"
-#include "../item/ellipse.h"
-#include "../item/freeform.h"
-#include "../item/item.h"
-#include "../item/line.h"
-#include "../item/rectangle.h"
-#include "../item/text.h"
+#include "../context/applicationcontext.hpp"
+#include "../context/renderingcontext.hpp"
+#include "../context/spatialcontext.hpp"
+#include "../data-structures/cachegrid.hpp"
+#include "../data-structures/quadtree.hpp"
+#include "../item/arrow.hpp"
+#include "../item/ellipse.hpp"
+#include "../item/freeform.hpp"
+#include "../item/item.hpp"
+#include "../item/line.hpp"
+#include "../item/rectangle.hpp"
+#include "../item/text.hpp"
 #include <QDir>
 #include <QFileDialog>
 #include <QJsonArray>

@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "freeformfactory.h"
+#include "freeformfactory.hpp"
 
-#include "../freeform.h"
+#include "../freeform.hpp"
 
 FreeformFactory::FreeformFactory() {
 }

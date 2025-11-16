@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "rectangletool.h"
+#include "rectangletool.hpp"
 
-#include "../item/factory/rectanglefactory.h"
+#include "../item/factory/rectanglefactory.hpp"
 
 RectangleTool::RectangleTool() {
     m_itemFactory = std::make_unique<RectangleFactory>();

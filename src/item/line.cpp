@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "line.h"
+#include "line.hpp"
 
-#include "../common/utils.h"
+#include "../common/utils.hpp"
 
 LineItem::LineItem() {
 }

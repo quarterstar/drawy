@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "ellipsefactory.h"
+#include "ellipsefactory.hpp"
 
-#include "../ellipse.h"
+#include "../ellipse.hpp"
 
 EllipseFactory::EllipseFactory() {
 }

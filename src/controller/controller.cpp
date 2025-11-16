@@ -16,18 +16,18 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "controller.h"
+#include "controller.hpp"
 
-#include "../canvas/canvas.h"
-#include "../common/constants.h"
-#include "../common/renderitems.h"
-#include "../components/toolbar.h"
-#include "../context/applicationcontext.h"
-#include "../context/renderingcontext.h"
-#include "../context/spatialcontext.h"
-#include "../context/uicontext.h"
-#include "../event/event.h"
-#include "../tools/tool.h"
+#include "../canvas/canvas.hpp"
+#include "../common/constants.hpp"
+#include "../common/renderitems.hpp"
+#include "../components/toolbar.hpp"
+#include "../context/applicationcontext.hpp"
+#include "../context/renderingcontext.hpp"
+#include "../context/spatialcontext.hpp"
+#include "../context/uicontext.hpp"
+#include "../event/event.hpp"
+#include "../tools/tool.hpp"
 #include <QDateTime>
 #include <QWheelEvent>
 

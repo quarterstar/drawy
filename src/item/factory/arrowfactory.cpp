@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "arrowfactory.h"
+#include "arrowfactory.hpp"
 
-#include "../arrow.h"
+#include "../arrow.hpp"
 
 ArrowFactory::ArrowFactory() {
 }

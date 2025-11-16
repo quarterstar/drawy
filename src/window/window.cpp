@@ -16,17 +16,17 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "window.h"
+#include "window.hpp"
 
-#include "../canvas/canvas.h"
-#include "../components/actionbar.h"
-#include "../components/propertybar.h"
-#include "../components/toolbar.h"
-#include "../context/applicationcontext.h"
-#include "../context/renderingcontext.h"
-#include "../context/uicontext.h"
-#include "../controller/controller.h"
-#include "boardlayout.h"
+#include "../canvas/canvas.hpp"
+#include "../components/actionbar.hpp"
+#include "../components/propertybar.hpp"
+#include "../components/toolbar.hpp"
+#include "../context/applicationcontext.hpp"
+#include "../context/renderingcontext.hpp"
+#include "../context/uicontext.hpp"
+#include "../controller/controller.hpp"
+#include "boardlayout.hpp"
 #include <QButtonGroup>
 #include <QFile>
 #include <QFontDatabase>

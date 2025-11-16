@@ -16,15 +16,15 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "spatialcontext.h"
+#include "spatialcontext.hpp"
 
-#include "../canvas/canvas.h"
-#include "../command/commandhistory.h"
-#include "../data-structures/cachegrid.h"
-#include "../data-structures/quadtree.h"
-#include "applicationcontext.h"
-#include "coordinatetransformer.h"
-#include "renderingcontext.h"
+#include "../canvas/canvas.hpp"
+#include "../command/commandhistory.hpp"
+#include "../data-structures/cachegrid.hpp"
+#include "../data-structures/quadtree.hpp"
+#include "applicationcontext.hpp"
+#include "coordinatetransformer.hpp"
+#include "renderingcontext.hpp"
 #include <memory>
 
 SpatialContext::SpatialContext(ApplicationContext *context)

@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "rectanglefactory.h"
+#include "rectanglefactory.hpp"
 
-#include "../rectangle.h"
+#include "../rectangle.hpp"
 
 RectangleFactory::RectangleFactory() {
 }

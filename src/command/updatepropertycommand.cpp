@@ -16,14 +16,14 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "updatepropertycommand.h"
+#include "updatepropertycommand.hpp"
 
-#include "../context/applicationcontext.h"
-#include "../context/coordinatetransformer.h"
-#include "../context/spatialcontext.h"
-#include "../data-structures/cachegrid.h"
-#include "../item/item.h"
-#include "../properties/property.h"
+#include "../context/applicationcontext.hpp"
+#include "../context/coordinatetransformer.hpp"
+#include "../context/spatialcontext.hpp"
+#include "../data-structures/cachegrid.hpp"
+#include "../item/item.hpp"
+#include "../properties/property.hpp"
 #include <QRectF>
 
 UpdatePropertyCommand::UpdatePropertyCommand(QVector<std::shared_ptr<Item>> items,

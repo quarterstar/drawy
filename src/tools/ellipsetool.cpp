@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "ellipsetool.h"
+#include "ellipsetool.hpp"
 
-#include "../item/factory/ellipsefactory.h"
+#include "../item/factory/ellipsefactory.hpp"
 
 EllipseTool::EllipseTool() {
     m_itemFactory = std::make_unique<EllipseFactory>();

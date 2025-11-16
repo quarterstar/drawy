@@ -16,16 +16,16 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "serializer.h"
+#include "serializer.hpp"
 
-#include "../context/applicationcontext.h"
-#include "../context/renderingcontext.h"
-#include "../context/spatialcontext.h"
-#include "../data-structures/quadtree.h"
-#include "../item/freeform.h"
-#include "../item/item.h"
-#include "../item/polygon.h"
-#include "../item/text.h"
+#include "../context/applicationcontext.hpp"
+#include "../context/renderingcontext.hpp"
+#include "../context/spatialcontext.hpp"
+#include "../data-structures/quadtree.hpp"
+#include "../item/freeform.hpp"
+#include "../item/item.hpp"
+#include "../item/polygon.hpp"
+#include "../item/text.hpp"
 #include <QFileDialog>
 #include <QJsonArray>
 #include <QJsonDocument>

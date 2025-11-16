@@ -16,7 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "property.h"
+#include "property.hpp"
 
 Property::Type Property::type() const {
     return m_type;

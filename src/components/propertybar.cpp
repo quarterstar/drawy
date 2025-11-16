@@ -16,14 +16,14 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "propertybar.h"
+#include "propertybar.hpp"
 
-#include "../context/applicationcontext.h"
-#include "../context/uicontext.h"
-#include "../properties/widgets/propertymanager.h"
-#include "../properties/widgets/propertywidget.h"
-#include "../tools/tool.h"
-#include "toolbar.h"
+#include "../context/applicationcontext.hpp"
+#include "../context/uicontext.hpp"
+#include "../properties/widgets/propertymanager.hpp"
+#include "../properties/widgets/propertywidget.hpp"
+#include "../tools/tool.hpp"
+#include "toolbar.hpp"
 #include <QLabel>
 #include <QSpacerItem>
 #include <QVBoxLayout>

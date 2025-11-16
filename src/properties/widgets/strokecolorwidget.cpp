@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "strokecolorwidget.h"
+#include "strokecolorwidget.hpp"
 
-#include "../property.h"
+#include "../property.hpp"
 #include <QButtonGroup>
 #include <QColor>
 #include <QHBoxLayout>

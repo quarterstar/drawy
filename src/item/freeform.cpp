@@ -16,10 +16,10 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "freeform.h"
+#include "freeform.hpp"
 
-#include "../common/constants.h"
-#include "../common/utils.h"
+#include "../common/constants.hpp"
+#include "../common/utils.hpp"
 #include <QDateTime>
 #include <memory>
 

@@ -16,17 +16,17 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "movetool.h"
+#include "movetool.hpp"
 
-#include "../canvas/canvas.h"
-#include "../common/renderitems.h"
-#include "../context/applicationcontext.h"
-#include "../context/renderingcontext.h"
-#include "../context/spatialcontext.h"
-#include "../context/uicontext.h"
-#include "../data-structures/quadtree.h"
-#include "../event/event.h"
-#include "../item/item.h"
+#include "../canvas/canvas.hpp"
+#include "../common/renderitems.hpp"
+#include "../context/applicationcontext.hpp"
+#include "../context/renderingcontext.hpp"
+#include "../context/spatialcontext.hpp"
+#include "../context/uicontext.hpp"
+#include "../data-structures/quadtree.hpp"
+#include "../event/event.hpp"
+#include "../item/item.hpp"
 
 MoveTool::MoveTool() {
     m_cursor = QCursor(Qt::OpenHandCursor);

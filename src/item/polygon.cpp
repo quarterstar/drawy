@@ -16,7 +16,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "polygon.h"
+#include "polygon.hpp"
 
 PolygonItem::PolygonItem() {
     m_properties[Property::StrokeWidth] = Property{1, Property::StrokeWidth};

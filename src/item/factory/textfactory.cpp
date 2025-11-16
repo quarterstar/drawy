@@ -16,9 +16,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "textfactory.h"
+#include "textfactory.hpp"
 
-#include "../text.h"
+#include "../text.hpp"
 
 TextFactory::TextFactory() {
 }
