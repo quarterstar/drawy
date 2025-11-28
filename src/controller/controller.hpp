@@ -3,8 +3,8 @@
  * Copyright (C) 2025 - Prayag Jain <prayagjain2@gmail.com>
  *
  * Authors:
- * 1. Prayag Jain - prayagjain2@gmail.com
- * 2. quarterstar - quarterstar@proton.me
+ * 1. Prayag Jain <prayagjain2@gmail.com>
+ * 2. quarterstar <quarterstar@proton.me>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
