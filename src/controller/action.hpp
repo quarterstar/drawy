@@ -2,6 +2,7 @@
 
 #include <cstdint>
 #include <memory>
+#include <set>
 #include <variant>
 #include <vector>
 
@@ -16,6 +17,42 @@ struct ActionKey {
     std::variant<Qt::Key, Qt::MouseButton> m_id;
     bool m_mouse{false};
     size_t m_count{1};
+
+    // NOTE: required by std::set
+    std::strong_ordering operator<=>(ActionKey const &o) const noexcept {
+        if (m_id.index() != o.m_id.index())
+            return m_id.index() < o.m_id.index() ? std::strong_ordering::less
+                                                 : std::strong_ordering::greater;
+
+        auto visit_cmp = std::visit(
+            [](auto const &a, auto const &b) -> std::strong_ordering {
+                using A = std::decay_t<decltype(a)>;
+                using B = std::decay_t<decltype(b)>;
+
+                if constexpr (!std::is_same_v<A, B>) {
+                    return std::strong_ordering::equal;
+                } else {
+                    if (a < b)
+                        return std::strong_ordering::less;
+                    if (b < a)
+                        return std::strong_ordering::greater;
+                    return std::strong_ordering::equal;
+                }
+            },
+            m_id,
+            o.m_id);
+
+        if (visit_cmp != std::strong_ordering::equal)
+            return visit_cmp;
+
+        if (m_mouse != o.m_mouse)
+            return m_mouse < o.m_mouse ? std::strong_ordering::less : std::strong_ordering::greater;
+        if (m_count < o.m_count)
+            return std::strong_ordering::less;
+        if (m_count > o.m_count)
+            return std::strong_ordering::greater;
+        return std::strong_ordering::equal;
+    }
 };
 
 inline ActionKey key(Qt::MouseButton key, size_t count = 1) {
@@ -29,7 +66,7 @@ inline ActionKey key(Qt::Key key, size_t count = 1) {
 }
 
 struct ActionData {
-    std::vector<ActionKey> m_keys;
+    std::set<std::vector<ActionKey>> m_keys;
     bool m_holdRequired{false};
     int64_t m_maxGapMs{0};
 };
@@ -113,12 +150,12 @@ inline std::vector<ActionFacade> getDefaultActions(ToolBar &toolbar, Canvas &can
 
     result.push_back(ActionFacade{
         std::make_unique<ToolTask>(toolbar, canvas, Tool::Move),
-        ActionData{{key(Qt::Key_Space), key(Qt::LeftButton)}, true, -2},
+        ActionData{{{key(Qt::Key_Space), key(Qt::LeftButton)}, {key(Qt::MiddleButton)}}, true, -2},
     });
 
     result.push_back(ActionFacade{
         std::make_unique<ToolTask>(toolbar, canvas, Tool::Eraser),
-        ActionData{{key(Qt::RightButton)}, true, -2},
+        ActionData{{{key(Qt::RightButton)}}, true, -2},
     });
 
     return result;

@@ -233,38 +233,42 @@ void Controller::keyReleased(QKeyEvent *event) {
 
 void Controller::anyPressed(std::variant<QKeyEvent *, QMouseEvent *> input) {
     for (auto &action : m_actions) {
-        auto keysView =
-            action.m_data.m_keys | std::views::transform([](auto key) { return key.m_id; });
-        std::vector<std::variant<Qt::Key, Qt::MouseButton>> keys{keysView.begin(), keysView.end()};
+        for (const auto &keyCombination : action.m_data.m_keys) {
+            auto keysView =
+                keyCombination | std::views::transform([](auto key) { return key.m_id; });
+            std::vector<std::variant<Qt::Key, Qt::MouseButton>> keys{keysView.begin(),
+                                                                     keysView.end()};
 
-        bool hasAllMoveKeys = action.m_data.m_maxGapMs < 0
-                                  ? this->satisfiesKeys(keys)
-                                  : this->satisfiesKeys(keys, std::nullopt);
+            bool hasAllMoveKeys = action.m_data.m_maxGapMs < 0
+                                      ? this->satisfiesKeys(keys)
+                                      : this->satisfiesKeys(keys, std::nullopt);
 
-        if (m_occupationKeyBuffer.empty() && hasAllMoveKeys) {
-            m_occupationKeyBuffer = m_keyBuffer;
-            action.enable(m_taskCtx);
+            if (m_occupationKeyBuffer.empty() && hasAllMoveKeys) {
+                m_occupationKeyBuffer = m_keyBuffer;
+                action.enable(m_taskCtx);
+            }
+
+            action.m_state.m_prevHeld = hasAllMoveKeys;
         }
-
-        action.m_state.m_prevHeld = hasAllMoveKeys;
     }
 }
 
 void Controller::anyReleased(std::variant<QKeyEvent *, QMouseEvent *> input) {
     for (auto &action : m_actions) {
-        bool hasAllMoveKeys =
-            std::ranges::all_of(action.m_data.m_keys, [&](const auto &requiredKey) {
+        for (const auto &keyCombination : action.m_data.m_keys) {
+            bool hasAllMoveKeys = std::ranges::all_of(keyCombination, [&](const auto &requiredKey) {
                 return std::ranges::any_of(m_keyBuffer, [&](const auto &pressedKey) {
                     return pressedKey.m_key == requiredKey.m_id;
                 });
             });
 
-        if (!hasAllMoveKeys) {
-            m_occupationKeyBuffer.clear();
-            action.disable(m_taskCtx);
-        }
+            if (!hasAllMoveKeys) {
+                m_occupationKeyBuffer.clear();
+                action.disable(m_taskCtx);
+            }
 
-        action.m_state.m_prevHeld = hasAllMoveKeys;
+            action.m_state.m_prevHeld = hasAllMoveKeys;
+        }
     }
 
     if (m_keyBuffer.empty()) {
