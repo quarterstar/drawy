@@ -32,6 +32,25 @@ file(GLOB_RECURSE SRC_FILES
     "${SRC_DIR}/*.qss"
 )
 
+set(COMPRESSION_SUPPORT ON)
+if (WIN32)
+    set(COMPRESSION_SUPPORT OFF)
+endif()
+
+# Exclude compression features for Windows (kanzi not supported)
+if(NOT COMPRESSION_SUPPORT)
+    # list the files to exclude explicitly
+    set(EXCLUDE_FILES
+        "${SRC_DIR}/common/utils/compression.cpp"
+        "${SRC_DIR}/common/utils/compression.hpp"
+    )
+
+    # remove them from the main source list
+    list(REMOVE_ITEM SRC_FILES ${EXCLUDE_FILES})
+endif()
+
+list(REMOVE_ITEM SRC_FILES ${EXCLUDE_FILES})
+
 # Combine translation files with the source files.
 set(PROJECT_SOURCES ${TS_FILES} ${SRC_FILES})
 
@@ -74,3 +93,7 @@ if (UNIX AND NOT APPLE)
   install(FILES assets/logo.svg DESTINATION ${CMAKE_INSTALL_FULL_DATADIR}/icons/hicolor/scalable/apps RENAME io.github.prayag2.Drawy.svg)
   install(FILES deploy/linux/io.github.prayag2.Drawy.metainfo.xml.in DESTINATION ${CMAKE_INSTALL_FULL_DATADIR}/metainfo/ RENAME io.github.prayag2.Drawy.metainfo.xml)
 endif()
+
+target_compile_definitions(${PROJECT_NAME} PRIVATE
+    COMPRESSION_SUPPORT=$<BOOL:${COMPRESSION_SUPPORT}>
+)

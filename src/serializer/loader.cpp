@@ -26,9 +26,9 @@
 #include <QString>
 #include <format>
 #include <memory>
+#include <optional>
 
 #include "../common/constants.hpp"
-#include "../common/utils/compression.hpp"
 #include "../context/applicationcontext.hpp"
 #include "../context/renderingcontext.hpp"
 #include "../context/spatialcontext.hpp"
@@ -41,6 +41,43 @@
 #include "../item/line.hpp"
 #include "../item/rectangle.hpp"
 #include "../item/text.hpp"
+
+#ifdef COMPRESSION_SUPPORT
+#include "../common/utils/compression.hpp"
+
+std::optional<QJsonDocument> loadCompressedSave(QFile &file) {
+    QByteArray compressedByteArray = file.readAll();
+    QJsonParseError parseError;
+
+    QByteArray byteArray;
+    try {
+        byteArray = Common::Utils::Compression::decompressData(compressedByteArray);
+    } catch (const std::exception &ex) {
+        qWarning() << "Decompression failed:" << ex.what();
+
+        QByteArray decoded = QByteArray::fromBase64(compressedByteArray);
+        if (!decoded.isEmpty() && decoded.size() < compressedByteArray.size()) {
+            try {
+                byteArray = Common::Utils::Compression::decompressData(decoded);
+            } catch (const std::exception &ex2) {
+                qWarning() << "Base64-decode fallback also failed:" << ex2.what();
+                return std::nullopt;
+            }
+        } else {
+            return std::nullopt;
+        }
+    }
+
+    QJsonDocument doc = QJsonDocument::fromJson(byteArray, &parseError);
+    if (doc.isNull() || !doc.isObject()) {
+        qWarning() << "JSON parse failed:" << parseError.errorString()
+                   << "offset:" << parseError.offset;
+        return std::nullopt;
+    }
+
+    return doc;
+}
+#endif
 
 void Loader::loadFromFile(ApplicationContext *context) {
     // file filter
@@ -58,35 +95,36 @@ void Loader::loadFromFile(ApplicationContext *context) {
         return;
     }
 
-    QByteArray compressedByteArray = file.readAll();
-    file.close();
+    bool jsonLoadFailed = false;
 
-    QByteArray byteArray;
-    try {
-        byteArray = Common::Utils::Compression::decompressData(compressedByteArray);
-    } catch (const std::exception &ex) {
-        qWarning() << "Decompression failed:" << ex.what();
+    QByteArray byteArray = file.readAll();
+    QJsonParseError parseError;
+    QJsonDocument doc = QJsonDocument::fromJson(byteArray, &parseError);
+    if (!doc.isNull() && doc.isObject()) {
+        jsonLoadFailed = true;
+        qWarning() << "JSON parse failed:" << parseError.errorString()
+                   << "offset:" << parseError.offset;
+    }
 
-        QByteArray decoded = QByteArray::fromBase64(compressedByteArray);
-        if (!decoded.isEmpty() && decoded.size() < compressedByteArray.size()) {
-            try {
-                byteArray = Common::Utils::Compression::decompressData(decoded);
-            } catch (const std::exception &ex2) {
-                qWarning() << "Base64-decode fallback also failed:" << ex2.what();
-                return;
-            }
+#ifdef COMPRESSION_SUPPORT
+    if (jsonLoadFailed) {
+        auto maybeDoc = loadCompressedSave(file);
+
+        if (maybeDoc.has_value()) {
+            doc = maybeDoc.value();
+            jsonLoadFailed = false;
         } else {
+            file.close();
             return;
         }
     }
+#endif
 
-    QJsonParseError parseError;
-    QJsonDocument doc = QJsonDocument::fromJson(byteArray, &parseError);
-    if (doc.isNull() || !doc.isObject()) {
-        qWarning() << "JSON parse failed:" << parseError.errorString()
-                   << "offset:" << parseError.offset;
+    if (jsonLoadFailed) {
         return;
     }
+
+    file.close();
 
     QJsonObject docObj = doc.object();
 
