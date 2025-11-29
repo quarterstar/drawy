@@ -26,6 +26,7 @@
 #include <memory>
 
 #include "../common/constants.hpp"
+#include "../common/utils/compression.hpp"
 #include "../context/applicationcontext.hpp"
 #include "../context/renderingcontext.hpp"
 #include "../context/spatialcontext.hpp"
@@ -34,10 +35,6 @@
 #include "../item/item.hpp"
 #include "../item/polygon.hpp"
 #include "../item/text.hpp"
-
-#ifdef COMPRESSION_SUPPORT
-#include "../common/utils/compression.hpp"
-#endif
 
 Serializer::Serializer() {
 }
@@ -134,17 +131,14 @@ void Serializer::saveToFile() {
         QFileDialog::getSaveFileName(nullptr, "Save File", defaultFilePath, text.data())};
 
     auto data{doc.toJson(QJsonDocument::Compact)};
-
-#ifdef COMPRESSION_SUPPORT
-    data = Common::Utils::Compression::compressData(data);
-#endif
+    auto compressedData{Common::Utils::Compression::compressData(data)};
 
     QFile file{fileName};
     file.open(QIODevice::WriteOnly);
-    qint64 written = file.write(data);
+    qint64 written = file.write(compressedData);
     file.close();
 
-    if (written != data.size()) {
+    if (written != compressedData.size()) {
         qWarning() << "Warning: not all bytes were written";
     }
 
